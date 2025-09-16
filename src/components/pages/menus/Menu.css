@@ -1,0 +1,12 @@
+.week__container h1 {
+    font-size: 2.2rem;           /* крупный заголовок */
+    font-weight: 700;            /* жирный */
+    text-align: center;          /* по центру */
+    /*margin: 1.5rem 0;            !* отступ сверху и снизу *!*/
+    margin: 0;
+    color: #1e1e2f;              /* тёмный акцентный цвет */
+    letter-spacing: 1px;         /* немного увеличенный интервал */
+    text-transform: uppercase;   /* капсом */
+    /*border-bottom: 3px solid #e0e0e0; !* линия снизу *!*/
+    /*padding-bottom: 0.5rem;      !* отступ под текстом перед линией *!*/
+}

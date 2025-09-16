@@ -19,13 +19,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    /*padding: 1rem;*/
+    padding-bottom: 1rem;
     background: #f6f7fb;
 }
 
 .day__title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    margin: 0;
 }
 
 /* Кнопки приёмов пищи */
@@ -61,7 +63,7 @@
 .meal__gallery {
     display: flex;
     overflow-x: auto;          /* скролл есть */
-    overflow-y: hidden;
+    overflow-y: visible;  /* ✅ теперь тень не обрезается */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     width: 100%;

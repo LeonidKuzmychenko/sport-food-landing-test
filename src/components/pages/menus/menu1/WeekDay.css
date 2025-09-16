@@ -1,13 +1,12 @@
-/* Вертикальный скролл по дням */
+/* Вертикальный список дней */
 .week__container {
-    /*height: 100vh;*/
-    overflow-y: scroll;
+    overflow-y: auto;          /* автоматический вертикальный скролл */
+    overflow-x: hidden;        /* запрещаем горизонтальный скролл */
     scroll-snap-type: y mandatory;
 }
 
-/* Каждый день — на весь экран */
+/* Каждый день */
 .day__section {
-    /*height: 100vh;*/
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -46,7 +45,8 @@
 /* Горизонтальная галерея */
 .meal__gallery {
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto;          /* скролл только внутри галереи */
+    overflow-y: hidden;        /* вертикального внутри галереи нет */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     width: 100%;
@@ -54,9 +54,11 @@
 }
 
 .meal__item {
-    flex: 0 0 100%;
+    flex: 0 0 auto;            /* ширина под содержимое */
+    width: 100%;               /* растягиваем на всю ширину контейнера */
     scroll-snap-align: center;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .meal__item img {

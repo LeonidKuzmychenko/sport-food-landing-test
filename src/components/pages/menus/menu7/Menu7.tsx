@@ -1,11 +1,11 @@
-function Menu3() {
+function Menu7() {
     return (
         <>
             <div>
-                1800 - Fir Balance
+                3200 - Mass Builder
             </div>
         </>
     );
 }
 
-export default Menu3
+export default Menu7

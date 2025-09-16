@@ -1,11 +1,11 @@
-function Menu3() {
+function Menu8() {
     return (
         <>
             <div>
-                1800 - Fir Balance
+                Преміум меню
             </div>
         </>
     );
 }
 
-export default Menu3
+export default Menu8

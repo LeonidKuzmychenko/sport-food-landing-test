@@ -1,11 +1,11 @@
-function Menu3() {
+function Menu5() {
     return (
         <>
             <div>
-                1800 - Fir Balance
+                2500 - Active Energy
             </div>
         </>
     );
 }
 
-export default Menu3
+export default Menu5

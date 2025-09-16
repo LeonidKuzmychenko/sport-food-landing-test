@@ -1,11 +1,11 @@
-function Menu3() {
+function Menu6() {
     return (
         <>
             <div>
-                1800 - Fir Balance
+                3000 - Muscle Gain
             </div>
         </>
     );
 }
 
-export default Menu3
+export default Menu6

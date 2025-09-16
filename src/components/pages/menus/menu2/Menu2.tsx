@@ -3,7 +3,7 @@ function Menu2() {
     return (
         <>
             <div>
-                Page2
+                1600 - Slim Fit
             </div>
         </>
     )

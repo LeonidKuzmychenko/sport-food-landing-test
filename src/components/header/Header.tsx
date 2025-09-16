@@ -18,13 +18,28 @@ function Header() {
 
                     <div className="page__dropdown-content" role="menu">
                         <NavLink to="/menu1" className="page__dropdown-link" role="menuitem">
-                            Подменю 1
+                            1200 - Slim Control
                         </NavLink>
                         <NavLink to="/menu2" className="page__dropdown-link" role="menuitem">
-                            Подменю 2
+                            1600 - Slim Fit
                         </NavLink>
                         <NavLink to="/menu3" className="page__dropdown-link" role="menuitem">
-                            Подменю 3
+                            1800 - Fir Balance
+                        </NavLink>
+                        <NavLink to="/menu4" className="page__dropdown-link" role="menuitem">
+                            2200 - Balance Energy
+                        </NavLink>
+                        <NavLink to="/menu5" className="page__dropdown-link" role="menuitem">
+                            2500 - Active Energy
+                        </NavLink>
+                        <NavLink to="/menu6" className="page__dropdown-link" role="menuitem">
+                            3000 - Muscle Gain
+                        </NavLink>
+                        <NavLink to="/menu7" className="page__dropdown-link" role="menuitem">
+                            3200 - Mass Builder
+                        </NavLink>
+                        <NavLink to="/menu8" className="page__dropdown-link" role="menuitem">
+                            Преміум меню
                         </NavLink>
                     </div>
                 </div>

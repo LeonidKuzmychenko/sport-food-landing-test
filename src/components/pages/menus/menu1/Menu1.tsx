@@ -5,7 +5,7 @@ function Menu1() {
     return (
         <>
             <div className="page__container">
-                Page1
+                1200 - Slim Control
             </div>
         </>
     )

@@ -46,6 +46,13 @@
     transition: background 0.2s;
 }
 
+.meal__btn.active {
+    background: #00bcd4;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 0 2px #00bcd4aa;
+}
+
 .meal__btn:hover {
     background: #00bcd4;
 }
@@ -76,6 +83,7 @@
     text-align: center;
     box-sizing: border-box;
 }
+
 
 .meal__item img {
     max-width: 100%;

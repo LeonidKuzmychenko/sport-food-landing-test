@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./WeekDay.css";
 
 interface Meal {
@@ -13,11 +13,17 @@ interface Props {
 
 function WeekDay({ day, meals }: Props) {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const [activeMeal, setActiveMeal] = useState(0);
 
     const handleScroll = (index: number) => {
+        setActiveMeal(index);
         if (scrollRef.current) {
             const child = scrollRef.current.children[index] as HTMLElement;
-            child.scrollIntoView({ behavior: "smooth", inline: "center" });
+            child.scrollIntoView({
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest", // не двигаем экран по вертикали
+            });
         }
     };
 
@@ -30,7 +36,7 @@ function WeekDay({ day, meals }: Props) {
                     <button
                         key={idx}
                         onClick={() => handleScroll(idx)}
-                        className="meal__btn"
+                        className={`meal__btn ${idx === activeMeal ? "active" : ""}`}
                     >
                         {meal.name}
                     </button>

@@ -1,10 +1,6 @@
 import { useRef, useState } from "react";
 import "./WeekDay.css";
-
-interface Meal {
-    name: string;
-    image: string;
-}
+import type {Meal} from "../../../data/weekData.ts";
 
 interface Props {
     day: string;
@@ -22,7 +18,7 @@ function WeekDay({ day, meals }: Props) {
             child.scrollIntoView({
                 behavior: "smooth",
                 inline: "center",
-                block: "nearest", // не двигаем экран по вертикали
+                block: "nearest",
             });
         }
     };
@@ -38,7 +34,7 @@ function WeekDay({ day, meals }: Props) {
                         onClick={() => handleScroll(idx)}
                         className={`meal__btn ${idx === activeMeal ? "active" : ""}`}
                     >
-                        {meal.name}
+                        {meal.meal}
                     </button>
                 ))}
             </div>
@@ -46,7 +42,8 @@ function WeekDay({ day, meals }: Props) {
             <div className="meal__gallery" ref={scrollRef}>
                 {meals.map((meal, idx) => (
                     <div key={idx} className="meal__item">
-                        <img src={meal.image} alt={meal.name} />
+                        <p>{meal.dish}</p>
+                        <img src={meal.image} alt={meal.meal} />
                     </div>
                 ))}
             </div>

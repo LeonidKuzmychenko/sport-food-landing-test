@@ -1,15 +1,6 @@
 import "./Menu.css";
-import WeekDay from "./WeekDay";
-
-interface Meal {
-    name: string;
-    image: string;
-}
-
-interface Day {
-    day: string;
-    meals: Meal[];
-}
+import WeekDay from "./WeekDay.tsx";
+import type {Day} from "../../../data/weekData.ts";
 
 interface MenuProps {
     weekData: Day[];

@@ -1,8 +1,16 @@
 /* Вертикальный список дней */
 .week__container {
-    overflow-y: auto;          /* автоматический вертикальный скролл */
-    overflow-x: hidden;        /* запрещаем горизонтальный скролл */
+    overflow-y: auto;          /* скролл есть */
+    overflow-x: hidden;        /* горизонтального нет */
     scroll-snap-type: y mandatory;
+
+    /* Скрываем скроллбар */
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.week__container::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
 }
 
 /* Каждый день */
@@ -45,17 +53,25 @@
 /* Горизонтальная галерея */
 .meal__gallery {
     display: flex;
-    overflow-x: auto;          /* скролл только внутри галереи */
-    overflow-y: hidden;        /* вертикального внутри галереи нет */
+    overflow-x: auto;          /* скролл есть */
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     width: 100%;
     max-width: 900px;
+
+    /* Скрываем скроллбар */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.meal__gallery::-webkit-scrollbar {
+    display: none;
 }
 
 .meal__item {
-    flex: 0 0 auto;            /* ширина под содержимое */
-    width: 100%;               /* растягиваем на всю ширину контейнера */
+    flex: 0 0 auto;
+    width: 100%;
     scroll-snap-align: center;
     text-align: center;
     box-sizing: border-box;

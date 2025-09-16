@@ -1,0 +1,72 @@
+/* Вертикальный скролл по дням */
+.week__container {
+    /*height: 100vh;*/
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* Каждый день — на весь экран */
+.day__section {
+    /*height: 100vh;*/
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #f6f7fb;
+}
+
+.day__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Кнопки приёмов пищи */
+.meal__buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.meal__btn {
+    padding: 0.6rem 1.2rem;
+    background: #1e1e2f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.meal__btn:hover {
+    background: #00bcd4;
+}
+
+/* Горизонтальная галерея */
+.meal__gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 900px;
+}
+
+.meal__item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    text-align: center;
+}
+
+.meal__item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.meal__item p {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}

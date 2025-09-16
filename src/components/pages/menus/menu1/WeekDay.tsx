@@ -47,7 +47,6 @@ function WeekDay({ day, meals }: Props) {
                 {meals.map((meal, idx) => (
                     <div key={idx} className="meal__item">
                         <img src={meal.image} alt={meal.name} />
-                        <p>{meal.name}</p>
                     </div>
                 ))}
             </div>

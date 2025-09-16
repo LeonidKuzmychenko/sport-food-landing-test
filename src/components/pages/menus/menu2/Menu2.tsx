@@ -1,4 +1,4 @@
-function App() {
+function Menu2() {
 
     return (
         <>
@@ -9,4 +9,4 @@ function App() {
     )
 }
 
-export default App
+export default Menu2

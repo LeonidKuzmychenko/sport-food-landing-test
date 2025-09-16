@@ -1,24 +1,28 @@
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Layout from "./Layout.tsx";
-import Page1 from "./components/pages/Page1.tsx";
-import Page2 from "./components/pages/Page2.tsx";
-import Page3 from "./components/pages/Page3.tsx";
+import Menu1 from "./components/pages/menus/menu1/Menu1.tsx";
+import Menu2 from "./components/pages/menus/menu2/Menu2.tsx";
+import Menu3 from "./components/pages/menus/menu3/Menu3.tsx";
+import Main from "./components/pages/main/Main.tsx";
+import Contacts from "./components/pages/contacts/Contacts.tsx";
 
 function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Layout />,
+            element: <Layout/>,
             children: [
-                { index: true, element: <Page1 /> },
-                { path: "page2", element: <Page2 /> },
-                { path: "page3", element: <Page3 /> },
-                { path: "*", element: <h2>404 Not Found</h2> },
+                {index: true, element: <Main/>},
+                {path: "menu1", element: <Menu1/>},
+                {path: "menu2", element: <Menu2/>},
+                {path: "menu3", element: <Menu3/>},
+                {path: "contacts", element: <Contacts/>},
+                {path: "*", element: <h2>404 Not Found</h2>},
             ],
         },
     ]);
 
-    return <RouterProvider router={router} />;
+    return <RouterProvider router={router}/>;
 }
 
 export default App;

@@ -5,11 +5,11 @@ import Header from "./components/header/Header.tsx";
 
 function Layout() {
     return (
-        <div className="mainPage">
+        <div className="page">
             <Header/>
 
-            <main className="main">
-                <Outlet/> {/* сюда подставляется текущая страница */}
+            <main className="page__main">
+                <Outlet/>
             </main>
         </div>
     );

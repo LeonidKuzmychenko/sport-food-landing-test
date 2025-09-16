@@ -1,4 +1,4 @@
-.mainPage {
+.page {
     display: flex;
     flex-direction: column;
     /*width: 100vw;*/
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.main {
+.page__main {
     flex: 1; /* занимает всё оставшееся место */
     background: #fafafa;
     /*padding: 16px;*/

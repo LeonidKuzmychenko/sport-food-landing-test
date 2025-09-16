@@ -1,12 +1,14 @@
-function App() {
+import "./Main.css";
+
+function Main() {
 
     return (
         <>
             <div>
-                Page1
+                Main
             </div>
         </>
     )
 }
 
-export default App
+export default Main
